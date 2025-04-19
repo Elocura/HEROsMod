@@ -169,8 +169,8 @@ namespace HEROsMod.HEROsModServices
 			buttonView.AddChild(bStopRain);
 			buttonView.AddChild(bStartRain);
 
-			UIImage bStopSandstorm = new UIImage(HEROsMod.instance.Assets.Request<Texture2D>("Images/rainStop", AssetRequestMode.ImmediateLoad));
-			UIImage bStartSandstorm = new UIImage(HEROsMod.instance.Assets.Request<Texture2D>("Images/rainIcon", AssetRequestMode.ImmediateLoad));
+			UIImage bStopSandstorm = new UIImage(HEROsMod.instance.Assets.Request<Texture2D>("Images/sandstormStop", AssetRequestMode.ImmediateLoad));
+			UIImage bStartSandstorm = new UIImage(HEROsMod.instance.Assets.Request<Texture2D>("Images/sandstormStart", AssetRequestMode.ImmediateLoad));
 			bStartSandstorm.Tooltip = HEROsMod.HeroText("StartSandstorm");
 			bStopSandstorm.Tooltip = HEROsMod.HeroText("StopSandstorm");
 			bStartSandstorm.onLeftClick += bStartSandstorm_onLeftClick;
