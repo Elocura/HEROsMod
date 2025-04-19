@@ -795,7 +795,7 @@ namespace HEROsMod.HEROsModServices
 
 		public NPCStats(NPC npc)
 		{
-			this.Name = Lang.GetNPCNameValue(npc.type);// npc.name;
+			this.Name = Lang.GetNPCNameValue(npc.netID);// npc.name;
 			this.NetID = npc.netID;
 			this.IsTownNPC = npc.townNPC;
 			this.IsCritter = NPCID.Sets.CountsAsCritter[npc.type];
