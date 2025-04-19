@@ -35,7 +35,7 @@ namespace HEROsMod
 						}
 						catch (Exception e)
 						{
-							ModUtils.DebugText("PostDrawInInventory Error: " + e.Message + e.StackTrace);
+							ModUtils.DebugText("ModifyInterfaceLayers Error: " + e.Message + e.StackTrace);
 						}
 						return true;
 					},

@@ -503,97 +503,32 @@ namespace HEROsMod.HEROsModServices
 			}
 		}
 
-		private void RenameNPCFromList(string name, int type)
-		{
-			for (int i = 0; i < npcList.Count; i++)
-			{
-				if (npcList[i].NetID == type)
-				{
-					npcList[i].Name = name;
-					return;
-				}
-			}
-		}
-
 		internal void GetNPCList()
 		{
 			npcList = new List<NPCStats>();
 			NPC npc;
 			npc = new NPC();
-			for (int i = 0; i < TextureAssets.Npc.Length; i++)
+			for (int i = 1; i < TextureAssets.Npc.Length; i++)
 			{
-				npc.SetDefaults(i);
-				//if (npc.name != string.Empty)
+				if (!NPCID.Sets.NPCBestiaryDrawOffset.TryGetValue(i, out var value) || !value.Hide)
 				{
+					npc.SetDefaults(i);
 					npcList.Add(new NPCStats(npc));
 				}
 			}
 			for (int i = -1; i >= -MobSpawner.NumberOfNegativeNPCs; i--)
 			{
 				npc.SetDefaults(i);
-				//if (npc.name != string.Empty)
-				{
-					npcList.Add(new NPCStats(npc));
-				}
+				npcList.Add(new NPCStats(npc));
 			}
 			ModUtils.DebugText("GetNPCList Loaded " + npcList.Count + " npc. npcTexture: " + TextureAssets.Npc.Length);
 
-			//Golem
-			RemoveNPCTypeFromList(246);
-			RemoveNPCTypeFromList(247);
-			RemoveNPCTypeFromList(248);
-			RemoveNPCTypeFromList(249);
-			RenameNPCFromList("Eater of Worlds", 13);
-			RemoveNPCTypeFromList(14);
-			RemoveNPCTypeFromList(15);
-			RenameNPCFromList("Bone Serpent", 39);
-			RemoveNPCTypeFromList(40);
-			RemoveNPCTypeFromList(41);
-			RenameNPCFromList("Devourer", 7);
-			RemoveNPCTypeFromList(8);
-			RemoveNPCTypeFromList(9);
-			RenameNPCFromList("Giant Worm", 10);
-			RemoveNPCTypeFromList(11);
-			RemoveNPCTypeFromList(12);
-			RenameNPCFromList("Digger", 95);
-			RemoveNPCTypeFromList(96);
-			RemoveNPCTypeFromList(97);
-			RenameNPCFromList("World Feeder", 98);
-			RemoveNPCTypeFromList(99);
-			RemoveNPCTypeFromList(100);
-			RenameNPCFromList("Leech", 117);
-			RemoveNPCTypeFromList(118);
-			RemoveNPCTypeFromList(119);
-			RenameNPCFromList("Wyvern", 87);
-			RemoveNPCTypeFromList(88);
-			RemoveNPCTypeFromList(89);
-			RemoveNPCTypeFromList(90);
-			RemoveNPCTypeFromList(91);
-			RemoveNPCTypeFromList(92);
-			RenameNPCFromList("Skeletron", 35);
-			RemoveNPCTypeFromList(36);
-			//prime
-			RemoveNPCTypeFromList(128);
-			RemoveNPCTypeFromList(129);
-			RemoveNPCTypeFromList(130);
-			RemoveNPCTypeFromList(131);
-			//plantera
-			RemoveNPCTypeFromList(263);
-			RemoveNPCTypeFromList(264);
-			//destoryer
-			RemoveNPCTypeFromList(135);
-			RemoveNPCTypeFromList(136);
-			//pumpking
-			RemoveNPCTypeFromList(328);
-			//WoF
-			RemoveNPCTypeFromList(113);
-			RemoveNPCTypeFromList(114);
+			RemoveNPCTypeFromList(NPCID.WallofFlesh);
 
 			NPC wof = new NPC();
 			wof.SetDefaults(113);
 			npcList.Add(new WallOfFlesh(wof));
 
-			//npcList.Add(new EaterOfWorlds());
 			npc = null;
 			npcList = npcList.OrderBy(n => n.Name).ToList();
 
@@ -633,7 +568,7 @@ namespace HEROsMod.HEROsModServices
 			ModUtils.LoadNPC(npc.Type, immediate: true);
 			mobImage.Texture = TextureAssets.Npc[npc.Type];
 			mobImage.SourceRectangle = new Rectangle(0, 0, (int)mobImage.Texture.Value.Width, (int)mobImage.Texture.Value.Height / Main.npcFrameCount[npc.Type]);
-			//mobImage.ForegroundColor = CurrentNPC.AlphaColor;
+			mobImage.ForegroundColor = CurrentNPC.AlphaColor;
 			AddChild(mobImage);
 
 			UIImage mobImage2 = new UIImage();

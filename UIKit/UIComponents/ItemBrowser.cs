@@ -575,7 +575,7 @@ namespace HEROsMod.UIKit.UIComponents
 						},
 						//new Category("Throwing", x=>x.thrown),
 						new Category("Summon", x=>x.CountsAsClass(DamageClass.Summon) && !x.CountsAsClass(DamageClass.SummonMeleeSpeed) && !x.sentry),
-						new Category("Whips",x=>x.CountsAsClass(DamageClass.SummonMeleeSpeed) &&!x.sentry),
+						new Category("Whips",x=>x.CountsAsClass(DamageClass.SummonMeleeSpeed) && !x.sentry),
 						new Category("Throwing", x=>x.CountsAsClass(DamageClass.Throwing)),
 						new Category("Sentry", x=>x.CountsAsClass(DamageClass.Summon) && x.sentry),
 					},
