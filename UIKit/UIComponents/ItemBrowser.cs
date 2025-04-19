@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using ReLogic.Content;
 using System;
 using System.Collections.Generic;
@@ -555,7 +554,7 @@ namespace HEROsMod.UIKit.UIComponents
 				}
 			}
 			CategoriesLoaded = false;
-		}		
+		}
 		public static void ParseList2()
 		{
 			Category modCategory = new("Mod") {
@@ -575,7 +574,8 @@ namespace HEROsMod.UIKit.UIComponents
 							Sorts = new Sort[] { new Sort(new UIImage(HEROsMod.instance.Assets.Request<Texture2D>("Images/sortAmmo", AssetRequestMode.ImmediateLoad)) {Tooltip = HeroText("SortName.UseAmmoType")}, (x,y)=>x.useAmmo.CompareTo(y.useAmmo)), }
 						},
 						//new Category("Throwing", x=>x.thrown),
-						new Category("Summon", x=>x.CountsAsClass(DamageClass.Summon) && !x.sentry),
+						new Category("Summon", x=>x.CountsAsClass(DamageClass.Summon) && !x.CountsAsClass(DamageClass.SummonMeleeSpeed) && !x.sentry),
+						new Category("Whips",x=>x.CountsAsClass(DamageClass.SummonMeleeSpeed) &&!x.sentry),
 						new Category("Throwing", x=>x.CountsAsClass(DamageClass.Throwing)),
 						new Category("Sentry", x=>x.CountsAsClass(DamageClass.Summon) && x.sentry),
 					},
@@ -644,7 +644,7 @@ namespace HEROsMod.UIKit.UIComponents
 					SubCategories = new List<Category>() {
 						new Category("Carts", x=>x.mountType != -1 && MountID.Sets.Cart[x.mountType]),
 					}
-				},				
+				},
 				new Category("Pickup", x=>ItemID.Sets.IsAPickup[x.type]),
 				new Category("Dyes", x=>x.dye != 0),
 				new Category("BossSummons", x=>ItemID.Sets.SortingPriorityBossSpawns[x.type] != -1 && !SortingPriorityBossSpawnsExclusions.Contains(x.type) || x.netID == ItemID.PirateMap || x.netID == ItemID.SnowGlobe || x.netID == ItemID.DD2ElderCrystal) { // vanilla bug.
@@ -655,7 +655,7 @@ namespace HEROsMod.UIKit.UIComponents
 					SubCategories = new List<Category>() {
 						new Category("Poles", x=>x.fishingPole > 0) {Sorts = new Sort[] { new Sort(new UIImage(HEROsMod.instance.Assets.Request<Texture2D>("Images/sortFish", AssetRequestMode.ImmediateLoad)) {Tooltip = HeroText("SortName.PolePower")}, (x,y)=>x.fishingPole.CompareTo(y.fishingPole)), } },
 						new Category("Bait", x=>x.bait>0) {Sorts = new Sort[] { new Sort(new UIImage(HEROsMod.instance.Assets.Request<Texture2D>("Images/sortBait", AssetRequestMode.ImmediateLoad)) {Tooltip = HeroText("SortName.BaitPower")}, (x,y)=>x.bait.CompareTo(y.bait)), } },
-						new Category("QuestFish", x=>x.questItem),						
+						new Category("QuestFish", x=>x.questItem),
 						new Category("FishingCrate", x=>ItemID.Sets.IsFishingCrate[x.type]),
 					}
 				},
