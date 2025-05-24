@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Terraria.Chat;
+using Terraria.Localization;
 
 namespace HEROsMod.HEROsModNetwork
 {
@@ -149,6 +151,12 @@ namespace HEROsMod.HEROsModNetwork
 						if (Permissions.ContainsKey(permissionName))
 						{
 							Permissions[permissionName] = true;
+						}
+						else
+						{
+							string permissionNotFoundWarning = $"The permission '{permissionName}' does not exist on the server. Make sure that permissions are registered on clients and the server.";
+							ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(permissionNotFoundWarning), Color.Red);
+							HEROsMod.instance.Logger.Warn(permissionNotFoundWarning);
 						}
 					}
 				}
