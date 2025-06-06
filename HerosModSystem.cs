@@ -14,6 +14,7 @@ namespace HEROsMod
 		public override void PostDrawFullscreenMap(ref string mouseText)
 		{
 			Teleporter.instance.PostDrawFullScreenMap(ref mouseText);
+			TeleportToPlayers.instance.PostDrawFullScreenMap(ref mouseText);
 			MapRevealer.instance.PostDrawFullScreenMap();
 		}
 

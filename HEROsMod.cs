@@ -491,6 +491,7 @@ namespace HEROsMod
 			ServiceController.AddService(instance.prefixEditor);
 			//		ServiceController.AddService(new InvasionService());
 			ServiceController.AddService(new Teleporter());
+			ServiceController.AddService(new TeleportToPlayers());
 			ServiceController.AddService(new RegionService());
 			ServiceController.AddService(new CheckTileModificationTool());
 			ServiceController.AddService(new PlayerList());
