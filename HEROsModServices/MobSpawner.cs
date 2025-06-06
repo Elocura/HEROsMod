@@ -86,7 +86,7 @@ namespace HEROsMod.HEROsModServices
 		private UIButton bFriendly;
 		private UIButton bBoss;
 		private UIButton bMod;
-		
+
 		//Slot itemSlot;
 
 		public bool Loaded = false;
@@ -770,7 +770,12 @@ namespace HEROsMod.HEROsModServices
 			}
 
 			int spawnType = NetID < 0 ? NetID : Type;
-			int index = NPC.NewNPC(NPC.GetSource_NaturalSpawn(), (int)player.position.X + (200 * player.direction), (int)player.position.Y - 10, spawnType);
+			Vector2 spawnPosition = player.Center;
+			if (!ContentSamples.NpcsByNetId[Type].friendly)
+			{
+				spawnPosition.X += 200 * player.direction;
+			}
+			int index = NPC.NewNPC(NPC.GetSource_NaturalSpawn(), (int)spawnPosition.X, (int)spawnPosition.Y, spawnType);
 		}
 	}
 
