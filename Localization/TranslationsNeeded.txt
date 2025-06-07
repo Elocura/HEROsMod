@@ -3,7 +3,7 @@ de-DE, 152/276, 55%, missing 124
 it-IT, 0/276, 0%, missing 276
 fr-FR, 0/276, 0%, missing 276
 es-ES, 216/276, 78%, missing 60
-ru-RU, 275/276, 100%, missing 1
+ru-RU, 276/276, 100%, missing 0
 zh-Hans, 276/276, 100%, missing 0
 pt-BR, 204/276, 74%, missing 72
 pl-PL, 0/276, 0%, missing 276
