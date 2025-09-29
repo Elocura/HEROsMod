@@ -508,9 +508,10 @@ namespace HEROsMod.HEROsModServices
 			npcList = new List<NPCStats>();
 			NPC npc;
 			npc = new NPC();
+			int[] showDespiteNPCBestiaryDrawModifiersHide = [NPCID.BoundTownSlimeOld];
 			for (int i = 1; i < TextureAssets.Npc.Length; i++)
 			{
-				if (!NPCID.Sets.NPCBestiaryDrawOffset.TryGetValue(i, out var value) || !value.Hide)
+				if (!NPCID.Sets.NPCBestiaryDrawOffset.TryGetValue(i, out var value) || !value.Hide || showDespiteNPCBestiaryDrawModifiersHide.Contains(i))
 				{
 					npc.SetDefaults(i);
 					npcList.Add(new NPCStats(npc));
@@ -525,10 +526,10 @@ namespace HEROsMod.HEROsModServices
 
 			RemoveNPCTypeFromList(NPCID.WallofFlesh);
 
-			NPC wof = new NPC();
-			wof.SetDefaults(113);
+			NPC wof = new();
+			wof.SetDefaults(NPCID.WallofFlesh);
 			npcList.Add(new WallOfFlesh(wof));
-
+			
 			npc = null;
 			npcList = npcList.OrderBy(n => n.Name).ToList();
 
@@ -846,7 +847,7 @@ namespace HEROsMod.HEROsModServices
 			}
 		IL_162:
 			num3 = num5 * 16;
-			int num7 = NPC.NewNPC(NPC.GetSource_NaturalSpawn(), num2, num3, 113, 0);
+			int num7 = NPC.NewNPC(NPC.GetSource_NaturalSpawn(), num2, num3, NPCID.WallofFlesh, 0);
 			if (Main.netMode == NetmodeID.SinglePlayer)
 			{
 				Main.NewText(Language.GetTextValue("Announcement.HasAwoken", Main.npc[num7].TypeName), 175, 75, 255);
