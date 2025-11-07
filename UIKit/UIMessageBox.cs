@@ -25,8 +25,7 @@ namespace HEROsMod.UIKit
 		public string Text
 		{
 			get { return label.Text; }
-			set
-			{
+			set {
 				label.Text = value;
 				this.Height = label.Height + 70;
 				PositionButtons();

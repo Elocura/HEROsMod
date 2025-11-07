@@ -79,8 +79,7 @@ namespace HEROsMod.UIKit
 
 		public Vector2 DrawPosition
 		{
-			get
-			{
+			get {
 				if (Parent != null)
 				{
 					return Parent.DrawPosition + Position + Offset - Parent.Origin;
@@ -145,8 +144,7 @@ namespace HEROsMod.UIKit
 
 		public float Opacity
 		{
-			get
-			{
+			get {
 				if (Parent != null)
 				{
 					return opacity * Parent.Opacity;
@@ -177,8 +175,7 @@ namespace HEROsMod.UIKit
 		public string Tooltip
 		{
 			get { return _tooltip; }
-			set
-			{
+			set {
 				if (value.Length > 0 && _tooltip.Length == 0)
 				{
 					//add event

@@ -847,7 +847,7 @@ namespace HEROsMod.HEROsModNetwork
 						{
 							string modname = binaryReader.ReadString();
 							string configname = binaryReader.ReadString();
-							if(modname == nameof(HEROsMod) && configname == nameof(HEROsModServerConfig))
+							if (modname == nameof(HEROsMod) && configname == nameof(HEROsModServerConfig))
 								return false;
 
 							HEROsModPlayer player = Players[playerNumber];
@@ -870,7 +870,7 @@ namespace HEROsMod.HEROsModNetwork
 						{
 							int player = binaryReader.ReadInt16();
 							int npcid = binaryReader.ReadInt16();
-							if(npcid <= -11 && npcid >= -18)
+							if (npcid <= -11 && npcid >= -18)
 							{
 								// Network.SendTextToPlayer("Pet, not prevented", player, Color.Green);
 								// These are pet things

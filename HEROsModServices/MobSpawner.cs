@@ -529,7 +529,7 @@ namespace HEROsMod.HEROsModServices
 			NPC wof = new();
 			wof.SetDefaults(NPCID.WallofFlesh);
 			npcList.Add(new WallOfFlesh(wof));
-			
+
 			npc = null;
 			npcList = npcList.OrderBy(n => n.Name).ToList();
 
@@ -568,8 +568,7 @@ namespace HEROsMod.HEROsModServices
 			CurrentNPC = npc;
 			ModUtils.LoadNPC(npc.Type, immediate: true);
 			mobImage.Texture = TextureAssets.Npc[npc.Type];
-			mobImage.SourceRectangle = npc.Type switch
-			{
+			mobImage.SourceRectangle = npc.Type switch {
 				NPCID.Deerclops => new Rectangle(
 					0,
 					0,

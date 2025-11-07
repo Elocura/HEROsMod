@@ -15,8 +15,7 @@ namespace HEROsMod.UIKit
 		public string Text
 		{
 			get { return text; }
-			set
-			{
+			set {
 				text = value;
 				SetWidthHeight();
 			}

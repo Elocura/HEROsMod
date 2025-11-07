@@ -41,8 +41,7 @@ namespace HEROsMod.HEROsModServices
 
 		public Vector2 ChatOffsetPosition
 		{
-			get
-			{
+			get {
 				if (Visible)
 					return new Vector2(0, this.Position.Y - Main.screenHeight - collapseArrow.Height);
 				else return Vector2.Zero;

@@ -18,8 +18,7 @@ namespace HEROsMod.HEROsModServices
 		public static Vector2 Position
 		{
 			get { return new Vector2(X, Y); }
-			set
-			{
+			set {
 				X = (int)value.X;
 				Y = (int)value.Y;
 			}
@@ -31,8 +30,7 @@ namespace HEROsMod.HEROsModServices
 		public static Vector2 Size
 		{
 			get { return new Vector2(Width, Height); }
-			set
-			{
+			set {
 				Width = (int)value.X;
 				Height = (int)value.Y;
 			}

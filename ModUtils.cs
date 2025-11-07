@@ -55,8 +55,7 @@ namespace HEROsMod
 		/// </summary>
 		public static Texture2D DummyTexture
 		{
-			get
-			{
+			get {
 				if (_dummyTexture == null)
 				{
 					_dummyTexture = new Texture2D(Main.instance.GraphicsDevice, 1, 1);
@@ -108,8 +107,7 @@ namespace HEROsMod
 
 		public static Texture2D HueTexture
 		{
-			get
-			{
+			get {
 				return TextureAssets.Hue.Value;
 				//return (Texture2D)_hueTexture.GetValue(Main.instance);
 			}
@@ -128,8 +126,7 @@ namespace HEROsMod
 
 		public static NetworkMode NetworkMode
 		{
-			get
-			{
+			get {
 				return (NetworkMode)Main.netMode;
 			}
 		}
@@ -139,8 +136,7 @@ namespace HEROsMod
 		/// </summary>
 		public static bool SSC
 		{
-			get
-			{
+			get {
 				return Main.ServerSideCharacter;
 			}
 		}
@@ -571,24 +567,21 @@ namespace HEROsMod
 
 		public static Vector2 CursorPosition
 		{
-			get
-			{
+			get {
 				return new Vector2(Main.mouseX, Main.mouseY);
 			}
 		}
 
 		public static Vector2 CursorWorldCoords
 		{
-			get
-			{
+			get {
 				return CursorPosition + Main.screenPosition;
 			}
 		}
 
 		public static Vector2 CursorTileCoords
 		{
-			get
-			{
+			get {
 				return GetTileCoordsFromWorldCoords(GetCursorWorldCoords());
 			}
 		}

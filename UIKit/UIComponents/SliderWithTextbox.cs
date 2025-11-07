@@ -7,8 +7,7 @@ namespace HEROsMod.UIKit.UIComponents
 		public float Value
 		{
 			get { return slider.Value; }
-			set
-			{
+			set {
 				slider.Value = value;
 			}
 		}

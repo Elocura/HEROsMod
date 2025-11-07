@@ -177,7 +177,7 @@ namespace HEROsMod.HEROsModServices
 
 	public class FlyCamModPlayer : ModPlayer
 	{
-	//	public override bool Autoload(ref string name) => true;
+		//	public override bool Autoload(ref string name) => true;
 
 		public override void ModifyScreenPosition()
 		{

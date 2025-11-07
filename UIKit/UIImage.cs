@@ -30,8 +30,7 @@ namespace HEROsMod.UIKit
 
 		public Rectangle SourceRectangle
 		{
-			get
-			{
+			get {
 				if (sourceRectangle == null) sourceRectangle = new Rectangle();
 				return (Rectangle)sourceRectangle;
 			}

@@ -15,8 +15,7 @@ namespace HEROsMod.UIKit
 		public bool Selected
 		{
 			get { return selected; }
-			set
-			{
+			set {
 				if (value != selected)
 				{
 					selected = value;

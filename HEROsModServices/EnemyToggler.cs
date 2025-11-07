@@ -3,8 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using System;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace HEROsMod.HEROsModServices
 {
@@ -79,7 +79,7 @@ namespace HEROsMod.HEROsModServices
 					this._hotbarIcon.Opacity = .5f;
 					this.HotbarIcon.Tooltip = HEROsMod.HeroText("EnableEnemySpawns");
 				}
-				if(EnemiesAllowed)
+				if (EnemiesAllowed)
 					Main.NewText(HEROsMod.HeroText("EnemySpawnsEnabled"));
 				else
 					Main.NewText(HEROsMod.HeroText("EnemySpawnsDisabled"));
@@ -102,7 +102,7 @@ namespace HEROsMod.HEROsModServices
 
 	public class EnemyTogglerGlobalNPC : GlobalNPC
 	{
-	//	public override bool Autoload(ref string name) => true;
+		//	public override bool Autoload(ref string name) => true;
 
 		public override void EditSpawnRate(Player player, ref int spawnRate, ref int maxSpawns)
 		{

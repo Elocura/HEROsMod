@@ -29,16 +29,14 @@ namespace HEROsMod.HEROsModNetwork
 
 		public RemoteClient ServerInstance
 		{
-			get
-			{
+			get {
 				return Netplay.Clients[_playerIndex];
 			}
 		}
 
 		public Player GameInstance
 		{
-			get
-			{
+			get {
 				return Main.player[_playerIndex];
 			}
 		}

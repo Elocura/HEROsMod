@@ -13,8 +13,7 @@ namespace HEROsMod.UIKit
 
 		public static GameScreen gameScreen
 		{
-			get
-			{
+			get {
 				if (_gameScreen == null)
 				{
 					_gameScreen = new GameScreen();
@@ -28,8 +27,7 @@ namespace HEROsMod.UIKit
 
 		public static MenuScreen menuScreen
 		{
-			get
-			{
+			get {
 				if (_menuScreen == null)
 				{
 					_menuScreen = new MenuScreen();
@@ -43,8 +41,7 @@ namespace HEROsMod.UIKit
 
 		public static MapScreen mapScreen
 		{
-			get
-			{
+			get {
 				if (_mapScreen == null)
 				{
 					_mapScreen = new MapScreen();

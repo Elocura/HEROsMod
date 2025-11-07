@@ -14,8 +14,7 @@ namespace HEROsMod.UIKit
 
 		private static Texture2D ScrollbgFill
 		{
-			get
-			{
+			get {
 				if (scrollbgFill == null)
 				{
 					Color[] edgeColors = new Color[ScrollbgTexture.Value.Width * ScrollbgTexture.Value.Height];
@@ -42,8 +41,7 @@ namespace HEROsMod.UIKit
 
 		public float ContentHeight
 		{
-			get
-			{
+			get {
 				return contentHeight;
 				/*
                 float result = contentHeight - Height;
@@ -58,16 +56,14 @@ namespace HEROsMod.UIKit
 
 		public float ScrollPosition
 		{
-			get
-			{
+			get {
 				float result = scrollPosition;
 				if (scrollPosition < 0 || Height > ContentHeight)
 					result = 0;
 				if (scrollPosition > ContentHeight) result = ContentHeight;
 				return result;
 			}
-			set
-			{
+			set {
 				if (value < 0) value = 0;
 				if (value > ContentHeight) value = ContentHeight;
 				scrollPosition = value;

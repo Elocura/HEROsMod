@@ -1,8 +1,8 @@
 ﻿using HEROsMod.HEROsModNetwork;
 using System;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace HEROsMod.Commands
 {
@@ -18,7 +18,7 @@ namespace HEROsMod.Commands
 
 		public override void Action(CommandCaller caller, string input, string[] args)
 		{
-			if(Main.netMode == NetmodeID.SinglePlayer)
+			if (Main.netMode == NetmodeID.SinglePlayer)
 			{
 				throw new UsageException("Only use this command while on server.");
 			}
@@ -28,7 +28,7 @@ namespace HEROsMod.Commands
 			}
 			if (args[0] == Network.AuthCode.ToString())
 			{
-				
+
 				if (Network.Players[caller.Player.whoAmI].Username.Length > 0)
 				{
 					Network.Players[caller.Player.whoAmI].Group = Network.AdminGroup;

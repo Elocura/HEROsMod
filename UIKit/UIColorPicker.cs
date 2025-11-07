@@ -11,8 +11,7 @@ namespace HEROsMod.UIKit
 		public Color Color
 		{
 			get { return Main.hslToRgb(Hue, Saturation, Luminosity); }
-			set
-			{
+			set {
 				Vector3 hsl = Main.rgbToHsl(value);
 				Hue = hsl.X;
 				Saturation = hsl.Y;
@@ -23,8 +22,7 @@ namespace HEROsMod.UIKit
 		public float Hue
 		{
 			get { return hueSlider.Value; }
-			set
-			{
+			set {
 				hueSlider.Value = value;
 				saturationSlider.Hue = value;
 				luminositySlider.Hue = value;
@@ -34,8 +32,7 @@ namespace HEROsMod.UIKit
 		public float Saturation
 		{
 			get { return saturationSlider.Value; }
-			set
-			{
+			set {
 				saturationSlider.Value = value;
 				luminositySlider.Saturation = value;
 			}
@@ -44,8 +41,7 @@ namespace HEROsMod.UIKit
 		public float Luminosity
 		{
 			get { return luminositySlider.Value; }
-			set
-			{
+			set {
 				luminositySlider.Value = value;
 				saturationSlider.Luminosity = value;
 			}

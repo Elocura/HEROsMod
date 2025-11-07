@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Terraria;
-using Terraria.Localization;
 using Terraria.ID;
+using Terraria.Localization;
 
 namespace HEROsMod.HEROsModNetwork
 {

@@ -15,8 +15,7 @@ namespace HEROsMod.HEROsModServices
 		public static bool LoggedIn
 		{
 			get { return _loggedIn; }
-			set
-			{
+			set {
 				_loggedIn = value;
 				LoginStatusChanged?.Invoke(null, EventArgs.Empty);
 			}
@@ -191,7 +190,7 @@ namespace HEROsMod.HEROsModServices
 			bRegister.X = spacing;
 			bRegister.Y = bCancel.Y;
 			this.Height = bCancel.Y + bCancel.Height + spacing;
-			
+
 			bSaveNone.Tooltip = HEROsMod.HeroText("SaveLoginNoneTooltip");
 			bSaveDefault.Tooltip = HEROsMod.HeroText("SaveLoginDefaultTooltip");
 			bSavePlayer.Tooltip = HEROsMod.HeroText("SaveLoginPlayerTooltip");

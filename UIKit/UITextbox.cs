@@ -14,8 +14,7 @@ namespace HEROsMod.UIKit
 
 		private static Texture2D TextboxFill
 		{
-			get
-			{
+			get {
 				if (textboxFill == null)
 				{
 					Color[] edgeColors = new Color[textboxBackground.Value.Width * textboxBackground.Value.Height];
@@ -81,8 +80,7 @@ namespace HEROsMod.UIKit
 
 		private string passwordString
 		{
-			get
-			{
+			get {
 				string result = "";
 				for (int i = 0; i < Text.Length; i++) result += "*";
 				return result;

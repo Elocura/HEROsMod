@@ -19,7 +19,7 @@ namespace HEROsMod
 {
 	public class HEROsModModPlayer : ModPlayer
 	{
-	//	public override bool Autoload(ref string name) => true;
+		//	public override bool Autoload(ref string name) => true;
 
 		private float FreezeNonLoggedInMessageTimer = 7f;
 
@@ -39,7 +39,7 @@ namespace HEROsMod
 				Player.controlSmart = false;
 				Player.controlTorch = false;
 			}
-			if(Main.netMode == NetmodeID.MultiplayerClient && !HEROsModServices.Login.LoggedIn && ModContent.GetInstance<HEROsModServerConfig>().FreezeNonLoggedIn)
+			if (Main.netMode == NetmodeID.MultiplayerClient && !HEROsModServices.Login.LoggedIn && ModContent.GetInstance<HEROsModServerConfig>().FreezeNonLoggedIn)
 			{
 				Player.frozen = true;
 				FreezeNonLoggedInMessageTimer -= ModUtils.DeltaTime;

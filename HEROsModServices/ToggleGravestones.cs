@@ -78,7 +78,7 @@ namespace HEROsMod.HEROsModServices
 
 	internal class GraveStoneGlobalProjectile : GlobalProjectile
 	{
-	//	public override bool Autoload(ref string name) => true;
+		//	public override bool Autoload(ref string name) => true;
 
 		public override bool PreAI(Projectile projectile)
 		{

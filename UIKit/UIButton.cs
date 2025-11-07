@@ -12,8 +12,7 @@ namespace HEROsMod.UIKit
 
 		public static Texture2D ButtonFill
 		{
-			get
-			{
+			get {
 				if (buttonFill == null)
 				{
 					Color[] edgeColors = new Color[buttonBackground.Value.Width * buttonBackground.Value.Height];
@@ -38,8 +37,7 @@ namespace HEROsMod.UIKit
 		public string Text
 		{
 			get { return label.Text; }
-			set
-			{
+			set {
 				label.Text = value;
 				label.Anchor = AnchorPosition.Center;
 				ScaleText();

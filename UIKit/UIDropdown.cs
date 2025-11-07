@@ -17,8 +17,7 @@ namespace HEROsMod.UIKit
 		public int SelectedItem
 		{
 			get { return selectedItem; }
-			set
-			{
+			set {
 				selectedItem = value;
 				selectedLabel.Text = items[value];
 			}

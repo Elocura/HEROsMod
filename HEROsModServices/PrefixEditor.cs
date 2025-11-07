@@ -202,7 +202,7 @@ namespace HEROsMod.HEROsModServices
 				}
 			}
 
-			validPrefixes = validPrefixes.OrderBy(x => -x.value-x.rare).ToList();
+			validPrefixes = validPrefixes.OrderBy(x => -x.value - x.rare).ToList();
 		}
 
 		private void PopulatePrefixDropDown()
@@ -225,7 +225,7 @@ namespace HEROsMod.HEROsModServices
 				{
 					label.ForegroundColor = rarityColors[item.rare];
 				}
-				if(item.rare > ItemRarityID.Purple)
+				if (item.rare > ItemRarityID.Purple)
 					label.ForegroundColor = rarityColors[11];
 				prefixList.AddChild(label);
 			}

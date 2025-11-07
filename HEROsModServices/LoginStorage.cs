@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Terraria;
 
 namespace HEROsMod.HEROsModServices
@@ -81,12 +81,12 @@ namespace HEROsMod.HEROsModServices
 			var loginServer = GetLoginServer(serverAddress);
 
 			LoginInfo loginToAdd = new LoginInfo() {
-					CharacterName = plrCharName,
-					Username = username,
-					Password = password
-				};
+				CharacterName = plrCharName,
+				Username = username,
+				Password = password
+			};
 
-			if(plrCharName == null)
+			if (plrCharName == null)
 			{
 				loginServer.DefaultLogin = loginToAdd;
 			}
@@ -95,8 +95,8 @@ namespace HEROsMod.HEROsModServices
 				if (loginServer.PlayerLogins != null && loginServer.PlayerLogins.Count > 0)
 				{
 					var plrSearch = loginServer.PlayerLogins.Where(plrLogin => plrLogin.CharacterName == plrCharName);
-					
-					if(plrSearch.Count() > 0)
+
+					if (plrSearch.Count() > 0)
 					{
 						var player = plrSearch.First();
 						player.Username = username;
@@ -145,7 +145,7 @@ namespace HEROsMod.HEROsModServices
 			{
 				return Logins.Remove(loginServer);
 			}
-			
+
 			return false;
 		}
 

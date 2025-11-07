@@ -6,8 +6,7 @@ namespace HEROsMod.UIKit.UIComponents
 {
 	internal class UIHotbar : UIWindow
 	{
-		internal RasterizerState _rasterizerState = new RasterizerState
-		{
+		internal RasterizerState _rasterizerState = new RasterizerState {
 			ScissorTestEnable = true
 		};
 
@@ -19,16 +18,14 @@ namespace HEROsMod.UIKit.UIComponents
 
 		internal float shownPosition
 		{
-			get
-			{
+			get {
 				return (float)Main.screenHeight - base.Height * 2 - 12f + 6;
 			}
 		}
 
 		internal float hiddenPosition
 		{
-			get
-			{
+			get {
 				if (HotBarParent != null)
 				{
 					return (float)Main.screenHeight - base.Height - 12f;
@@ -77,8 +74,7 @@ namespace HEROsMod.UIKit.UIComponents
 		internal bool selected
 		{
 			get { return _selected; }
-			set
-			{
+			set {
 				if (value == false)
 				{
 					hidden = true;
@@ -137,7 +133,7 @@ namespace HEROsMod.UIKit.UIComponents
 					base.Position = new Vector2(base.Position.X, y2);
 				}
 			}
-			else if(!hidden)
+			else if (!hidden)
 			{
 				Position = new Vector2(Position.X, shownPosition);
 			}

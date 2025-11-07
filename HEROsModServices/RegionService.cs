@@ -16,12 +16,10 @@ namespace HEROsMod.HEROsModServices
 
 		public static bool RegionsVisible
 		{
-			get
-			{
+			get {
 				return _regionsVisible;
 			}
-			set
-			{
+			set {
 				if (value != _regionsVisible)
 				{
 					if (value)

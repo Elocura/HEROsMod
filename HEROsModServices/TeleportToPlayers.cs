@@ -17,7 +17,7 @@ namespace HEROsMod.HEROsModServices
 			//On_Player.HasUnityPotion += On_Player_HasUnityPotion;
 			//On_Player.TakeUnityPotion += On_Player_TakeUnityPotion;
 		}
-		
+
 		//private bool On_Player_HasUnityPotion(On_Player.orig_HasUnityPotion orig, Player self)
 		//{
 		//	if (HasPermissionToUse)

@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using ReLogic.Content;
+using ReLogic.Content.Sources;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,11 +15,10 @@ using Terraria;
 using Terraria.Chat;
 using Terraria.GameContent;
 using Terraria.GameContent.NetModules;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
-using ReLogic.Content.Sources;
-using Terraria.ID;
 
 // TODO, freeze is bypassable.
 // TODO, regions prevent all the chest movement and right click.
@@ -93,7 +93,7 @@ namespace HEROsMod
 					// This stops queen bee
 					// issue: this stops events too? That is useful.
 					Network.SendTextToPlayer(HEROsMod.HeroText("YouDoNotHavePermissionToSpawnBosses"), plr, Color.Red);
-					return; 
+					return;
 				}
 			}
 			orig(plr, Type);
@@ -162,7 +162,7 @@ namespace HEROsMod
 			instance = null;
 			//NetTextModule.DeserializeAsServer -= NetTextModule_DeserializeAsServer;
 		}
-		
+
 		private Color Player_ChatColor(Terraria.On_Player.orig_ChatColor orig, Player self)
 		{
 			Color chatColor = Network.Players[self.whoAmI].Group?.Color ?? orig(self);
@@ -386,7 +386,7 @@ namespace HEROsMod
 					if (!ServiceHotbar.Collapsed)
 					{
 						ServiceHotbar.collapseArrow_onLeftClick(null, null);
-						if(!ServiceHotbar.Collapsed) // sub hotbars
+						if (!ServiceHotbar.Collapsed) // sub hotbars
 							ServiceHotbar.collapseArrow_onLeftClick(null, null);
 					}
 				}
@@ -422,7 +422,7 @@ namespace HEROsMod
 				}
 				else
 				{
-					callButtons.Add(new(permissionName, texture, buttonClickedAction,groupUpdated, tooltip));
+					callButtons.Add(new(permissionName, texture, buttonClickedAction, groupUpdated, tooltip));
 				}
 			}
 		}

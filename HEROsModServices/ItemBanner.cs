@@ -71,7 +71,7 @@ namespace HEROsMod.HEROsModServices
 
 	internal class ItemBannerGlobalProjectile : GlobalProjectile
 	{
-	//	public override bool Autoload(ref string name) => true;
+		//	public override bool Autoload(ref string name) => true;
 
 		// Is only called on server??
 		public override bool PreAI(Projectile projectile)

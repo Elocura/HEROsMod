@@ -15,8 +15,7 @@ namespace HEROsMod.UIKit
 
 		private static Texture2D BarFill
 		{
-			get
-			{
+			get {
 				if (barFill == null)
 				{
 					Color[] edgeColors = new Color[barTexture.Value.Width * barTexture.Value.Height];
@@ -43,8 +42,7 @@ namespace HEROsMod.UIKit
 		public float Value
 		{
 			get { return this.value; }
-			set
-			{
+			set {
 				if (value < MinValue)
 				{
 					value = MinValue;

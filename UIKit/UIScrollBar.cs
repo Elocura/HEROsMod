@@ -11,8 +11,7 @@ namespace HEROsMod.UIKit
 
 		private static Texture2D ScrollbarFill
 		{
-			get
-			{
+			get {
 				if (scrollbarFill == null)
 				{
 					Color[] edgeColors = new Color[ScrollbarTexture.Value.Width * ScrollbarTexture.Value.Height];

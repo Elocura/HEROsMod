@@ -19,7 +19,7 @@
 //            window.CanMove = true;
 //            window.Position = new Vector2(100, 100);
 //            window.Height = 500;
-            
+
 //            UILabel label = new UILabel("Test Label");
 //            label.Position = new Vector2(100, 50);
 //            label.Anchor = AnchorPosition.Center;
@@ -36,7 +36,7 @@
 //            bCancel.Position = new Vector2(window.Width - 8, window.Height - 8);
 //            bOk.Anchor = bCancel.Anchor;
 //            bOk.Position = new Vector2(bCancel.Position.X - bCancel.Width - 8, bCancel.Position.Y);
-            
+
 
 //            UISlider slider = new UISlider();
 //            slider.Position = new Vector2(100, 100);
@@ -48,14 +48,14 @@
 //            checkbox.Position = new Vector2(100, 200);
 //            checkbox.Anchor = AnchorPosition.Center;
 
-           
+
 //            UIListView listView = new UIListView();
 //            listView.Position = new Vector2(8, 8);
 //            for (int i = 0; i < 20; i++)
 //            {
 //                listView.AddItem("Item " + i);
 //            }
-             
+
 
 //            UIScrollView scrollView = new UIScrollView();
 //            scrollView.Position = new Vector2(8, 8);

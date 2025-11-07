@@ -46,8 +46,7 @@ internal sealed class UIHyperlink : UIView
 	internal string Text
 	{
 		get { return _text; }
-		set
-		{
+		set {
 			_text = value ?? string.Empty;
 			RecalculateSize();
 		}
@@ -56,8 +55,7 @@ internal sealed class UIHyperlink : UIView
 	internal string Url
 	{
 		get { return _url; }
-		set
-		{
+		set {
 			_url = value ?? string.Empty;
 
 			if (_tooltipEnabled)
@@ -76,8 +74,7 @@ internal sealed class UIHyperlink : UIView
 	internal bool TooltipEnabled
 	{
 		get { return _tooltipEnabled; }
-		set
-		{
+		set {
 			_tooltipEnabled = value;
 			Tooltip = _tooltipEnabled ? _url : string.Empty;
 		}
@@ -86,8 +83,7 @@ internal sealed class UIHyperlink : UIView
 	internal DynamicSpriteFont Font
 	{
 		get { return _font; }
-		set
-		{
+		set {
 			_font = value ?? FontAssets.DeathText.Value;
 			RecalculateSize();
 		}

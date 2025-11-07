@@ -1,12 +1,12 @@
-﻿using HEROsMod.UIKit;
+﻿using HEROsMod.HEROsModNetwork;
+using HEROsMod.UIKit;
 using HEROsMod.UIKit.UIComponents;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using System;
 using System.IO;
 using System.Linq;
 using Terraria;
-using HEROsMod.HEROsModNetwork;
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
 using Terraria.ModLoader;
 
 namespace HEROsMod.HEROsModServices

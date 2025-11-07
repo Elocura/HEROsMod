@@ -35,7 +35,7 @@ namespace HEROsMod.HEROsModNetwork
             //new PermissionInfo("ControlWeather", "Control Weather"),
             new PermissionInfo("EditWaypoints", HEROsMod.HeroText("PermissionInfo.EditWaypoints")),
 			new PermissionInfo("AccessWaypoints", HEROsMod.HeroText("PermissionInfo.AccessWaypoints")),
-            new PermissionInfo("ToggleGravestones", HEROsMod.HeroText("PermissionInfo.ToggleGravestones")),
+			new PermissionInfo("ToggleGravestones", HEROsMod.HeroText("PermissionInfo.ToggleGravestones")),
 			new PermissionInfo("CanUseBuffs", HEROsMod.HeroText("PermissionInfo.CanUseBuffs")),
 			//new PermissionInfo("ToggleHardmodeEnemies", "Toggle Hardmode Enemies"),
 			new PermissionInfo("GodMode", HEROsMod.HeroText("PermissionInfo.GodMode")),
@@ -56,8 +56,7 @@ namespace HEROsMod.HEROsModNetwork
 
 		public string Name
 		{
-			get
-			{
+			get {
 				return _name;
 			}
 		}

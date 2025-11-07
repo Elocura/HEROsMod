@@ -141,7 +141,7 @@ namespace HEROsMod.HEROsModNetwork
 				Network.Players[playerNumber].Group = Network.GetGroupByID(groupID);
 				if (Network.Players[playerNumber].UsingHEROsMod)
 					LoginSuccess(playerNumber);
-				Network.SendTextToPlayer(string.Format(HEROsMod.HeroText("LoggedInSuccessfully"),  Network.Players[playerNumber].Group.Name), playerNumber, Color.Green);
+				Network.SendTextToPlayer(string.Format(HEROsMod.HeroText("LoggedInSuccessfully"), Network.Players[playerNumber].Group.Name), playerNumber, Color.Green);
 			}
 			else
 			{
@@ -455,7 +455,7 @@ namespace HEROsMod.HEROsModNetwork
 				{
 					//if (Network.Players[i].Group?.ID == group.ID)
 					if (Network.Players[i].Group == group)
-						{
+					{
 						SendPlayerPermissions(i);
 					}
 				}

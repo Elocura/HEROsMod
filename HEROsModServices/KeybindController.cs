@@ -140,8 +140,7 @@ namespace HEROsMod.HEROsModServices
 
 		private bool _keyInputLocked
 		{
-			get
-			{
+			get {
 				return Main.blockInput || Main.editChest || Main.editSign || Main.drawingPlayerChat;
 			}
 		}
@@ -151,8 +150,7 @@ namespace HEROsMod.HEROsModServices
 
 		public bool KeyPressed
 		{
-			get
-			{
+			get {
 				if (_keyInputLocked) return false;
 				//if (key != Keys.None)
 				{
@@ -168,8 +166,7 @@ namespace HEROsMod.HEROsModServices
 
 		public bool KeyUp
 		{
-			get
-			{
+			get {
 				if (_keyInputLocked) return true;
 				//if (key != Keys.None)
 				{
@@ -185,8 +182,7 @@ namespace HEROsMod.HEROsModServices
 
 		public bool KeyDown
 		{
-			get
-			{
+			get {
 				if (_keyInputLocked) return false;
 				//if (key != Keys.None)
 				{

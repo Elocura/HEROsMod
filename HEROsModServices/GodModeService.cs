@@ -22,8 +22,7 @@ namespace HEROsMod.HEROsModServices
 		public static bool Enabled
 		{
 			get { return _enabled; }
-			set
-			{
+			set {
 				if (GodModeToggled != null)
 				{
 					GodModeToggled(value, _enabled);

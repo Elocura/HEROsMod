@@ -5,8 +5,8 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using System;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace HEROsMod.HEROsModServices
 {
@@ -128,8 +128,7 @@ namespace HEROsMod.HEROsModServices
 		//}
 		public static Asset<Texture2D> playTexture
 		{
-			get
-			{
+			get {
 				if (_playTexture == null) _playTexture = HEROsMod.instance.Assets.Request<Texture2D>("Images/speed1", AssetRequestMode.ImmediateLoad);
 				return _playTexture;
 			}
@@ -137,8 +136,7 @@ namespace HEROsMod.HEROsModServices
 
 		public static Asset<Texture2D> pauseTexture
 		{
-			get
-			{
+			get {
 				if (_pauseTexture == null) _pauseTexture = HEROsMod.instance.Assets.Request<Texture2D>("Images/speed0", AssetRequestMode.ImmediateLoad);
 				return _pauseTexture;
 			}
@@ -279,7 +277,7 @@ namespace HEROsMod.HEROsModServices
 				TimeWeatherChanger.ToggleTimePause();
 				UIImage b = (UIImage)sender;
 				TimePausedOfResumed();
-				if(TimeWeatherChanger.TimePaused)
+				if (TimeWeatherChanger.TimePaused)
 					Main.NewText(HEROsMod.HeroText("TimeHasBeenPaused"));
 				else
 					Main.NewText(HEROsMod.HeroText("TimeHasResumed"));

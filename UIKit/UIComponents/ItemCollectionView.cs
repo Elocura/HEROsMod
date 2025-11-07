@@ -10,8 +10,7 @@ namespace HEROsMod.UIKit.UIComponents
 		public Item[] Items
 		{
 			get { return _items; }
-			set
-			{
+			set {
 				_items = value;
 				RepopulateSlots();
 			}

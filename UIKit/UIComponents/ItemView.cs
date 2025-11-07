@@ -15,8 +15,7 @@ namespace HEROsMod.UIKit.UIComponents
 
 		private Asset<Texture2D> DemonAltarTexture
 		{
-			get
-			{
+			get {
 				if (_demonAltarTexture == null)
 				{
 					_demonAltarTexture = HEROsMod.instance.Assets.Request<Texture2D>("Images/Demon_Altar", AssetRequestMode.ImmediateLoad);

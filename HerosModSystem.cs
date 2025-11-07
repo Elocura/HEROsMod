@@ -87,6 +87,6 @@ namespace HEROsMod
 
 			//Only godmode for now
 			GodModeService.InvokeGodModeCallback();
-		}		
+		}
 	}
 }
